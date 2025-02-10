@@ -1,0 +1,77 @@
+@import ;
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#myRoom {
+  height: 600px; 
+  width: 850px; 
+  background-color: #CCC; 
+  margin: auto;
+}
+
+#myBed {
+  position: relative;
+  top: 200px;
+  background-color: #000;
+  color: white;
+}
+
+#myDesk {
+  position: relative;
+  background-color: green;
+}
+
+.bed {
+  height: 250px;
+  width: 500px;
+}
+.desk {
+  top: -250px;
+  height: 200px;
+  width: 75px;
+}
+
+#desk2 {
+  position: relative;
+  top: -450px;
+  height: 75px;
+  width: 200px;
+  background-color: green;
+}
+
+#laundrey {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: -250px;
+  right: -800px;
+  background-color: blue;
+}
+
+span{ display: inline-block; } 
+.flip_V{ transform: scale(1, -1); }
+
+#door {
+  border: dashed;
+  border-color: red;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  width: 150px;
+  height: 25px;
+}
+
+#dresser {
+  position: relative;
+  background-color: brown;
+  height: 250px;
+  width: 125px;
+  left: 725px;
+  top: -350px;
+}

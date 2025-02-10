@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dev-baker-homework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<style> 
+@import ;
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#myRoom {
+  height: 600px; 
+  width: 850px; 
+  background-color: #CCC; 
+  margin: auto;
+}
+
+#myBed {
+  position: relative;
+  top: 200px;
+  background-color: #000;
+  color: white;
+}
+
+#myDesk {
+  position: relative;
+  background-color: green;
+}
+
+.bed {
+  height: 250px;
+  width: 500px;
+}
+.desk {
+  top: -250px;
+  height: 200px;
+  width: 75px;
+}
+
+#desk2 {
+  position: relative;
+  top: -450px;
+  height: 75px;
+  width: 200px;
+  background-color: green;
+}
+
+#laundrey {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: -250px;
+  right: -800px;
+  background-color: blue;
+}
+
+span{ display: inline-block; } 
+.flip_V{ transform: scale(1, -1); }
+
+#door {
+  border: dashed;
+  border-color: red;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  width: 150px;
+  height: 25px;
+}
+
+#dresser {
+  position: relative;
+  background-color: brown;
+  height: 250px;
+  width: 125px;
+  left: 725px;
+  top: -350px;
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1> Layout of my room </h1>
+<p> This is a layout of my room. </p>
+<p> Here is my <a href="https://gist.github.com/user-attachments/assets/618ba88e-a00f-4d33-86a6-50571d7d6802" target="_blank"> wireframe</a> </p>
+
+<div id="myRoom">
+  
+  <div id="myBed" class="bed">  Bed </div>
+  
+  <div id="myDesk" class="desk"> Desk </div>
+  <div id="desk2"> Desk
+    <span class='flip_V'>🦭</span>
+  </div>
+  
+  <div id="door"> Door</div>
+  
+  <div id="dresser"> Dresser </div>
+  
+  <div id="laundrey">  </div>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+<script> $( document ).ready(function() {
+    console.log( "ready!" );
+$('#laundrey').draggable();
+
+});
+
+$(document)
+  .on(
+    'click', 
+      (event)=> 
+      {
+        let $clicked = $('#'+event.target.id );                
+        console.log(
+          event.target.id, 
+          $('#'+event.target.id)
+          .position()
+          .left);
+        })
+</script>
+</body>
+</html>
